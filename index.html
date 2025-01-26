@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bigyan Labs AMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <h2 class="company-name">Bigyan Labs</h2>
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="login-form">
+            <h1><strong>Login</strong></h1>
+            <form id="auth-form">
+                <input type="text" id="user-id" placeholder="User ID" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="team-picture">
+            <h1>Our Team</h1>
+            <p>Bigyan Labs is a team of dedicated professionals working together.</p> 
+            <img src="Team.webp" alt="Bigyan Labs Team">
+        </div>
+        <div id="dashboard" style="display: none;">
+            <h1>Welcome, <span id="user-name"></span>!</h1>
+            <div class="user-info">
+                <p><strong>Enrollment No:</strong> <span id="enrollment-no"></span></p>
+                <p><strong>Section:</strong> <span id="section"></span></p>
+                <p><strong>Roll No:</strong> <span id="roll-no"></span></p>
+                <p><strong>E-mail ID:</strong> <span id="email-id"></span></p>
+                <p><strong>Contact No:</strong> <span id="contact-no"></span></p>
+            </div>
+            <h1>Use this QR to mark your attendance</h1>
+            <div id="qr-code"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
